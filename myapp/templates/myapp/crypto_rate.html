@@ -1,0 +1,59 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Rates</title>
+</head>
+<body>
+<h1>Crypto Rates</h1>
+    <ul>
+        <li>Bitcoin: ${{ bitcoin_price }}</li>
+        <li>Ethereum: ${{ ethereum_price }}</li>
+    </ul>
+</body>
+</html>
+-->
+<!-- myapp/templates/myapp/crypto_rates.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Rates</title>
+</head>
+<body>
+    <h1>Crypto Rates</h1>
+    <table>
+        <tr>
+            <th>Cryptocurrency</th>
+            <th>Price (USD)</th>
+            <th>Direct Volume</th>
+            <th>Total Volume</th>
+            <th>Top Tier Volume</th>
+        </tr>
+        <tr>
+            <td>Bitcoin</td>
+            <td>${{ bitcoin_price }}</td>
+            <!-- Add more columns for direct volume, total volume, top-tier volume -->
+        </tr>
+        <tr>
+            <td>Ethereum</td>
+            <td>${{ ethereum_price }}</td>
+            <!-- Add more columns for direct volume, total volume, top-tier volume -->
+        </tr>
+    </table>
+
+    <!-- Create a container for the graph -->
+    <div id="cryptoChartContainer">
+        <div id="cryptoGraph"></div><!-- This is where the Matplotlib graph will be displayed -->
+    </div>
+
+    <!-- Reference your JavaScript file after loading static -->
+    <script src="{% static 'your_js_file.js' %}"></script>
+
+    <!-- Render the graph here using JavaScript -->
+    <script>
+        // Your JavaScript code
+    </script>
+</body>
+</html>

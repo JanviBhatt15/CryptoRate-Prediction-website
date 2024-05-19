@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Price Prediction</title>
+</head>
+<body>
+<h1>Crypto Price Prediction</h1>
+    <p>Real-time Cryptocurrency Data:</p>
+    <ul>
+        <li>Latest Timestamp: {{ latest_crypto_data.timestamp }}</li>
+        <li>Open Price: ${{ latest_crypto_data.open_price }}</li>
+        <li>High Price: ${{ latest_crypto_data.high_price }}</li>
+        <li>Low Price: ${{latest_crypto_data.low_price}}</li>
+        <li>Close Price: ${{latest_crypto_data.close_price}}<li>
+    </ul>
+    <p>Predicted Cryptocurrency Price:</p>
+    <p>The predicted price is: ${{ predictions }}</p>
+</body>
+</html>
